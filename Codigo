@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main(){
+    char CPF1 [15]; //CPF com (-) e (.)
+    char CPF2 [11] = ""; //CPF sem (-) e (.)
+    int i = 0, n = 0;
+
+    printf("Digite o numero de seu CPF da seguinte forma: NNN.NNN.NNN-NN\n");
+    scanf("%s", CPF1);
+
+    // Retirnado pontos e traços
+
+    for (i = 0; i < 14; i++)
+    {
+        if(CPF1[i] == '.' || CPF1[i] == '-'){
+    continue;
+    }else {
+    
+    CPF2[n] = CPF1[i];
+    n++; //Controla o tamnaho do CPF2
+    }
+}
+CPF2[n] = '\0';
+    printf("\n\nCPF Formatado = %s", CPF2);
+return 0;
+}
